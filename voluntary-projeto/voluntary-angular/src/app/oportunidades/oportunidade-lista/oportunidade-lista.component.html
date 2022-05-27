@@ -1,0 +1,42 @@
+<div class="col-md-6 col-lg-6 col-11 mx-auto my-auto">
+  <div class="input-group form-container">
+    <input class="form-control search-input " [(ngModel)]="filtroList" type="search" name="search"
+      placeholder="Ex: nome" autofocus="autofocus">
+    <div class="input-group-span">
+      <button id="material-icons-search" class="material-icons"> search</button>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <table class="table  table-hover">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">Associação</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Endereço</th>
+        <th scope="col">Ver</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Deletar</th>
+        <th scope="col">Inscrição</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let oportunidade of oportunidades | filtroOportunidade:filtroList">
+        <td>{{ oportunidade.nome }}</td>
+        <td>{{ oportunidade.associacao }}</td>
+        <td>{{ oportunidade.descricao }}</td>
+        <td>{{ oportunidade.endereco }}</td>
+        <td><button class="btn btn-outline-primary" routerLink="/detalhe/{{ oportunidade.id }}">
+            <span class="material-icons">visibility</span></button></td>
+        <td><button class="btn btn-outline-primary" routerLink="/editar/{{ oportunidade.id }}">
+            <span class="material-icons">edit</span></button></td>
+        <td><button class="btn btn-outline-danger" (click)="deletar(oportunidade.id)">
+            <span class="material-icons">delete</span></button></td>
+        <td><button class="btn btn-outline-warning" routerLink="/voluntario">
+            <span class="material-icons"> groups</span></button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

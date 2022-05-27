@@ -1,0 +1,233 @@
+// GRID
+.row {
+  display          : -webkit-box;
+  display          : -webkit-flex;
+  display          : -moz-box;
+  display          : -ms-flexbox;
+  display          : flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap    : wrap;
+  flex-wrap        : wrap;
+}
+
+.row-space {
+  -webkit-box-pack       : justify;
+  -webkit-justify-content: space-between;
+  -moz-box-pack          : justify;
+  -ms-flex-pack          : justify;
+  justify-content        : space-between;
+}
+
+.col-2 {
+  width: -webkit-calc((100% - 60px) / 2);
+  width: -moz-calc((100% - 60px) / 2);
+  width: calc((100% - 60px) / 2);
+}
+
+@media (max-width: 767px) {
+  .col-2 {
+    width: 100%;
+  }
+}
+
+* {
+  padding: 0;
+  margin : 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing   : inherit;
+  box-sizing        : inherit;
+}
+
+label {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 'Arial Narrow', Arial, sans-serif;
+  font-size  : 16px;
+}
+
+button {
+  outline   : none;
+  background: none;
+  border    : none;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 'Arial Narrow', Arial, sans-serif;
+  font-weight: 400;
+  font-size  : 14px;
+}
+
+
+h2 {
+  font-weight     : 400;
+  font-size       : 24px;
+  color           : #fff;
+  background-color: #556B2F;
+  margin-bottom   : 4rem;
+}
+
+
+// SPACING
+.p-t-10 {
+  padding-top: 10px;
+}
+
+.p-t-50 {
+  padding-top: 5rem;
+}
+
+.p-b-20 {
+  padding-bottom: 3rem;
+}
+
+// PAGE WRAPPER
+.page-wrapper {
+  min-height      : 100vh;
+  background-color: #fff;
+}
+
+// WRAPPER
+.wrapper {
+  margin: 0 auto;
+}
+
+.wrapper--w960 {
+  max-width: 960px;
+}
+
+.wrapper--w780 {
+  max-width: 780px;
+}
+
+.wrapper--w680 {
+  max-width: 680px;
+}
+
+// BUTTON
+.btn {
+  display           : inline-block;
+  line-height       : 40px;
+  padding           : 0 33px;
+  font-family       : 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, 'Arial Narrow', Arial, sans-serif;
+  cursor            : pointer;
+  color             : #fff;
+  -webkit-transition: all 0.4s ease;
+  -o-transition     : all 0.4s ease;
+  -moz-transition   : all 0.4s ease;
+  transition        : all 0.4s ease;
+  font-size         : 18px;
+}
+
+.btn--radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius   : 3px;
+  border-radius        : 3px;
+}
+
+.btn--pill {
+  -webkit-border-radius: 20px;
+  -moz-border-radius   : 20px;
+  border-radius        : 20px;
+}
+
+.btn--green {
+  background: #556B2F;
+}
+
+.btn--green:hover {
+  background-color: #9ACD32;
+}
+
+.btn-info {
+  background-color: #556B2F;
+}
+
+.btn-info:hover {
+  background-color: #9ACD32;
+}
+
+
+
+// FORM
+input,
+select {
+  outline           : none;
+  margin            : 0;
+  border            : none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow   : none;
+  box-shadow        : none;
+  width             : 100%;
+  font-size         : 14px;
+  font-family       : inherit;
+
+}
+
+.form-group {
+  position     : relative;
+  margin-bottom: 33px;
+  border-bottom: 1px solid #808000;
+}
+
+#input--style-3 {
+  padding   : 5px 0;
+  font-size : 16px;
+  color     : #556B2F;
+  background: transparent;
+}
+
+// CARD
+.card {
+  overflow             : hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius   : 3px;
+  border-radius        : 3px;
+  background           : #fff;
+}
+
+.card-3 {
+  background           : #BDB76B;
+  -webkit-border-radius: 10px;
+  -moz-border-radius   : 10px;
+  border-radius        : 10px;
+  -webkit-box-shadow   : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow      : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow           : 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  width                : 100%;
+  display              : table;
+}
+
+.card-3 .card-heading {
+  background: url("/assets/img/hands.jpg") top left/cover no-repeat;
+  display   : table-cell;
+  width     : 50%;
+}
+
+.card-3 .card-body {
+  padding       : 57px 65px;
+  padding-bottom: 65px;
+  display       : table-cell;
+}
+
+@media (max-width: 767px) {
+  .card-3 {
+    display: block;
+  }
+
+  .card-3 .card-heading {
+    display            : block;
+    width              : 100%;
+    padding-top        : 400px;
+    background-position: center center;
+  }
+
+  .card-3 .card-body {
+    display       : block;
+    width         : 100%;
+    padding       : 37px 30px;
+    padding-bottom: 45px;
+  }
+}

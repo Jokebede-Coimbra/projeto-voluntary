@@ -1,0 +1,36 @@
+<div class="page-wrapper  p-t-50 p-b-20">
+  <div class="wrapper wrapper--w780">
+    <div class="card card-3">
+      <div class="card-heading"></div>
+      <div class="card-body">
+        <div class="container" *ngIf="oportunidade">
+          <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
+            <div class="form-group">
+              <label for="nome">Nome</label>
+              <input type="text" class="form-control" id="input--style-3" name="nome" [(ngModel)]="oportunidade.nome"
+                required>
+            </div>
+            <div class="form-group">
+              <label for="associacao">Associação</label>
+              <input type="text" class="form-control" id="input--style-3" name="associacao"
+                [(ngModel)]="oportunidade.associacao" required>
+            </div>
+            <div class="form-group">
+              <label for="descricao">Descrição</label>
+              <input type="text" class="form-control" id="input--style-3" name="descricao"
+                [(ngModel)]="oportunidade.descricao" required>
+            </div>
+            <div class="form-group">
+              <label for="endereco">Endereço</label>
+              <input type="text" class="form-control" id="input--style-3" name="endereco"
+                [(ngModel)]="oportunidade.endereco" required>
+            </div>
+            <div class="p-t-10">
+              <button class="btn btn--pill btn--green" [disabled]="!f.valid">Atualizar</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+.social-network {
+  list-style: none;
+}
+
+.social-network>li {
+  display  : inline;
+  padding  : 10px;
+  font-size: 2rem;
+}
+
+
+fa-icon {
+  color: #556B2F;
+}
+
+fa-icon:hover {
+  color: #9ACD32;
+}

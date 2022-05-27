@@ -1,0 +1,25 @@
+.container {
+  margin-top: 5rem;
+
+}
+
+.col-lg-4 {
+  background-color: #bdb76bab;
+  border          : 2px solid #ddddd4;
+
+}
+
+.voluntary .col-lg-4 {
+  margin-bottom: 1.5rem;
+  text-align   : center;
+}
+
+.voluntary h2 {
+  font-weight: 400;
+}
+
+/* rtl:begin:ignore */
+.voluntary .col-lg-4 p {
+  margin-right: .75rem;
+  margin-left : .75rem;
+}

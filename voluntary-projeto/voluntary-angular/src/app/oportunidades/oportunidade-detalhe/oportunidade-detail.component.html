@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="page-wrapper bg-gra-01 p-t-50 p-b-20">
+    <div class="wrapper wrapper--w780">
+      <div class="card card-3">
+        <div class="card-heading"></div>
+        <div class="card-body">
+          <h2 class="card-header text-center">Detalhes da oportunidade</h2>
+          <div class="row mt-5" *ngIf="oportunidade">
+            <p><b>Id: </b>{{ oportunidade.id }}</p>
+            <p><b>Nome: </b>{{ oportunidade.nome }}</p>
+            <p><b>Associação: </b>{{ oportunidade.associacao }}</p>
+            <p><b>Descrição: </b>{{ oportunidade.descricao }}</p>
+            <p><b>Endereço: </b>{{ oportunidade.endereco }}</p>
+            <div class="p-t-10">
+              <button class="btn btn--pill btn--green" (click)="voltar()">Voltar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

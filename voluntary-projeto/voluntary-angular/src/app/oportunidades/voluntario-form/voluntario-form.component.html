@@ -1,0 +1,42 @@
+<div class="page-wrapper p-t-50 p-b-100">
+  <div class="wrapper wrapper--w780">
+    <div class="card card-3">
+      <div class="card-heading"></div>
+      <div class="card-body">
+        <h2 class="card-header text-center">Formulário de inscrição</h2>
+        <form method="POST" (ngSubmit)="onCreate()" novalidate #f="ngForm">
+          <div class="form-group">
+            <label for="nome">Nome</label>
+            <input type="text" class="form-control" id="input--style-3" name="nome" [(ngModel)]="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input type="text" class="form-control" id="input--style-3" placeholder="nome@gmail.com" name="email" [(ngModel)]="email" required>
+          </div>
+          <div class="form-group">
+            <label for="cpf">CPF</label>
+            <input type="text" class="form-control" id="input--style-3" maxlength="11" placeholder="12345678910" name="cpf" [(ngModel)]="cpf" required>
+          </div>
+          <div class="form-group">
+            <label for="telefone">Telefone</label>
+            <input type="text" class="form-control" id="input--style-3"  maxlength="12" placeholder="81 912345678" name="telefone" [(ngModel)]="telefone" required>
+          </div>
+          <div class="form-group">
+            <label for="oportunidade">Oportunidades</label>
+            <div class="rs-select2 js-select-simple select--no-search">
+              <select name="vaga" id="input--style-3" required>
+                <option disabled="disabled" selected="selected">--selecione--</option>
+                <option *ngFor="let oportunidade of oportunidades | async" [value]="oportunidade">
+                  {{ oportunidade.nome }}</option>
+              </select>
+              <div class="select-dropdown"></div>
+            </div>
+          </div>
+          <div class="p-t-10">
+            <button class="btn btn--pill btn--green" type="submit" [disabled]="!f.valid">Cadastrar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
